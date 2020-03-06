@@ -1,5 +1,5 @@
 #include <sensor/input_device.h>
-//Malok
+
 class AnalogSensor: public InputDevice {
 private:
     uint8_t pin;
@@ -22,6 +22,7 @@ bool AnalogSensor::init(uint8_t pin, uint8_t samples){
     this->counter = 0;
     this->samples = samples;
     this->timer = millis();
+    pinMode(this->pin, INPUT);
 }
 
 uint16_t AnalogSensor::read(){
