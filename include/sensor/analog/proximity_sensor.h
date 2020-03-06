@@ -1,4 +1,4 @@
-#include <input_device.h>
+#include <sensor/input_device.h>
 
 class ProximitySensor: public InputDevice {
 private:
