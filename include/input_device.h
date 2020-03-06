@@ -35,6 +35,7 @@ uint16_t InputDevice::getValue(){
 
 DataPack InputDevice::run(DataPack input){
     if(this->hasChange()){
+        //Serial.print("change");
         input.addData(DEVICE_ID_KEY, this->device_id);
         input.addData(DEVICE_TYPE_KEY, this->type);
         input.addData(VALUE_KEY, this->getValue());
